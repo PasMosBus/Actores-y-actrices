@@ -24,7 +24,7 @@ return (
         <div className="contenedor" key = {character.id}>
           <img className="pic" src= {character.img} alt=""/>
           <h3 className="name"> {character.name} </h3>
-          <p> {character.description}</p>
+          <p className="descript" > {character.description}</p>
         </div>
       ))
     }
