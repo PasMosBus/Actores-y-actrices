@@ -1,6 +1,7 @@
 import axios from "axios" 
 import { useEffect } from "react"
 import { useState } from "react"
+import './ShowCharacters.css'
 
 const url = "http://localhost:8080/characters" 
 const ShowCharacters = () => {
@@ -21,9 +22,9 @@ return (
     {
       characters.map (character => (
         <div className="contenedor" key = {character.id}>
-          <img src= {character.img} alt=""/>
-          <h3> {character.name} </h3>
-          <p> {character.description} </p>
+          <img className="pic" src= {character.img} alt=""/>
+          <h3 className="name"> {character.name} </h3>
+          <p> {character.description}</p>
         </div>
       ))
     }

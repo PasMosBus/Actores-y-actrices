@@ -1,0 +1,18 @@
+.contenedor {
+    width: 45%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: solid 3px black;
+    border-radius: 20px;
+}
+
+.pic{
+    width: 200px;
+}
+.name{
+    color: brown;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
