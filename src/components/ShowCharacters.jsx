@@ -1,34 +1,37 @@
-import axios from "axios" 
+import axios from "axios"
 import { useEffect } from "react"
 import { useState } from "react"
 import './ShowCharacters.css'
 
-const url = "http://localhost:8080/characters" 
+const url = "http://localhost:8080/characters"
 const ShowCharacters = () => {
-   
-    const [characters, setCharacters] = useState ([])    
-useEffect( () => {
-getAllCharacters()
-}, [])
-const getAllCharacters = async () => { 
-    const response = await axios.get(url) 
+
+  const [characters, setCharacters] = useState([])
+  useEffect(() => {
+    getAllCharacters()
+  }, [])
+  const getAllCharacters = async () => {
+    const response = await axios.get(url)
     let data = response.data
     console.log(data)
     setCharacters(data)
-}
+  }
 
-return (
+  return (
     <>
-    {
-      characters.map (character => (
-        <div className="contenedor" key = {character.id}>
-          <img className="pic" src= {character.img} alt=""/>
-          <h3 className="name"> {character.name} </h3>
-          <p className="descript" > <span>{character.name} </span>{character.description}</p>
-        </div>
-      ))
-    }
-    
+      {
+        characters.map(character => (
+          <div className="all-container">
+            <div className="contenedor" key={character.id}>
+              <img className="pic" src={character.img} alt="" />
+              <h3 className="name"> {character.name} </h3>
+              <p className="descript" > <span>{character.name} </span>{character.description}</p>
+            </div>
+          </div>
+
+        ))
+      }
+
     </>
   )
 }
