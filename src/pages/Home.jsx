@@ -4,7 +4,10 @@ import '../pages/Home.css'
 const Home = () => {
     return (
         <>
-            <ShowCharacters />
+            <div className="cont">
+                <button className="but-crear">Crear</button>
+                <ShowCharacters />
+            </div>
         </>
     )
 }

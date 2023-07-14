@@ -1,3 +1,16 @@
 body {
+    background-color: wheat;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.but-crear{
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: large;
+    font-weight: bolder;
     background-color: rgb(212, 123, 123);
 }
