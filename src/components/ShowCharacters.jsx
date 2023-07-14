@@ -12,13 +12,24 @@ getAllCharacters()
 const getAllCharacters = async () => { 
     const response = await axios.get(url) 
     let data = response.data
-    console.log(response.data)
+    console.log(data)
     setCharacters(data)
 }
 
 return (
-<div>ShowCharacters</div>
-)
+    <>
+    {
+      characters.map (character => (
+        <div className="contenedor" key = {character.id}>
+          <img src= {character.img} alt=""/>
+          <h3> {character.name} </h3>
+          <p> {character.description} </p>
+        </div>
+      ))
+    }
+    
+    </>
+  )
 }
 
 export default ShowCharacters
