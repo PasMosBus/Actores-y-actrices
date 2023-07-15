@@ -18,7 +18,7 @@ const ShowCharacters = () => {
     console.log(data)
     setCharacters(data)
   }
-    const handleEdit = (id) => {
+  const handleEdit = (id) => {
     // Перенаправляємо на сторінку редагування (в реальному застосунку)
     //navigate(`/edit/${id}`);
     alert(`Editing character with ID ${id}`);
@@ -27,7 +27,7 @@ const ShowCharacters = () => {
   const handleDelete = (id) => {
     // Deleting with API localhost8080
     setCharacters(characters.filter((character) => character.id !== id));
-    alert(`WARNING!!! Deleting character with ID ${id}`);
+    alert(`WARNING!!! DELETING ACTOR WITH ID ${id}`);
   };
 
   return (
@@ -40,20 +40,13 @@ const ShowCharacters = () => {
               <h3 className="name"> {character.name} </h3>
               <p className="descript" > <span>{character.name} </span>{character.description}</p>
               <div className="container-buttones">
-              <button className="buttons" onClick={() => handleEdit(character.id)}>
-                Edit
-              </button>
-              <button className="buttons" onClick={() => handleDelete(character.id)}>
-                Delete
-              </button>
-            </div>
-
+                <button className="buttons" onClick={() => handleEdit(character.id)}>Edit</button>
+                <button className="buttons" onClick={() => handleDelete(character.id)}>Delete</button>
+              </div>
             </div>
           </div>
         ))
       }
-
-
     </>
   )
 }
