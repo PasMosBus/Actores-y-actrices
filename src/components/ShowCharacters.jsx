@@ -16,6 +16,17 @@ const ShowCharacters = () => {
     console.log(data)
     setCharacters(data)
   }
+    const handleEdit = (id) => {
+    // Перенаправляємо на сторінку редагування (в реальному застосунку)
+    // navigate(`/edit-character/${id}`);
+    alert(`Editing character with ID ${id}`);
+  };
+
+  const handleDelete = (id) => {
+    // Видалення з локального стану (в реальному застосунку)
+    setCharacters(characters.filter((character) => character.id !== id));
+    alert(`WARNING!!! Deleting character with ID ${id}`);
+  };
 
   return (
     <>
@@ -26,10 +37,14 @@ const ShowCharacters = () => {
               <img className="pic" src={character.img} alt="" />
               <h3 className="name"> {character.name} </h3>
               <p className="descript" > <span>{character.name} </span>{character.description}</p>
-              <div className="container-buttones" >
-                <button className="buttons" >Edit</button>
-                <button className="buttons" >Delite</button>
-              </div>
+              <div className="container-buttones">
+              <button className="buttons" onClick={() => handleEdit(character.id)}>
+                Edit
+              </button>
+              <button className="buttons" onClick={() => handleDelete(character.id)}>
+                Delete
+              </button>
+            </div>
 
             </div>
           </div>
