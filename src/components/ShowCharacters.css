@@ -36,3 +36,10 @@ span {
     margin-right: 10px;
     text-align: center;
 }
+
+.container-buttones{
+    margin-bottom: 20px;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+}

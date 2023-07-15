@@ -6,7 +6,7 @@ const Home = () => {
         <>
             <div className="cont">
             
-                <button className="but-crear">Crear</button>
+                <button className="buttons">Crear</button>
                 <ShowCharacters />
             </div>
         </>

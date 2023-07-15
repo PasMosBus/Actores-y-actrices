@@ -26,11 +26,16 @@ const ShowCharacters = () => {
               <img className="pic" src={character.img} alt="" />
               <h3 className="name"> {character.name} </h3>
               <p className="descript" > <span>{character.name} </span>{character.description}</p>
+              <div className="container-buttones" >
+                <button className="buttons" >Edit</button>
+                <button className="buttons" >Delite</button>
+              </div>
+
             </div>
           </div>
-
         ))
       }
+
 
     </>
   )
