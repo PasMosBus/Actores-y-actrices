@@ -4,7 +4,7 @@ body {
 .cont{
     display: flex;
     flex-direction: column;
-    align-items: center;
+
 }
 .buttons{
     width: 100px;
