@@ -15,6 +15,7 @@ body {
     font-size: large;
     font-weight: bolder;
     background-color: rgb(212, 123, 123);
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.4);
 }
 .buttons:hover{
     background-color: rgb(197, 64, 64);
