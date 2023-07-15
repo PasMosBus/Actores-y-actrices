@@ -1,5 +1,7 @@
 body {
-    background-color: wheat;
+    background-image: url("https://html5book.ru/wp-content/uploads/2015/05/background6.png");
+    /* background-image: url("https://html5book.ru/wp-content/uploads/2015/07/background48.png"); */
+    /* background-color: wheat; */
 }
 .cont{
     display: flex;

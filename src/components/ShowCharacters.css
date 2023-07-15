@@ -15,7 +15,9 @@
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.4);
     background-color: whitesmoke;
 }
-
+.contenedor:hover {
+    box-shadow: 25px 25px 10px rgba(0, 0, 0, 0.4);
+}
 .pic{
     margin-top: 20px;
     width: 200px;
