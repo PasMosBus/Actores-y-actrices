@@ -5,6 +5,7 @@ const Home = () => {
     return (
         <>
             <div className="cont">
+            
                 <button className="but-crear">Crear</button>
                 <ShowCharacters />
             </div>
