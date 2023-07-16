@@ -14,7 +14,7 @@
     border-radius: 20px;
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.4);
     /* background-color: whitesmoke; */
-    background-image: url("https://html5book.ru/wp-content/uploads/2015/07/background48.png");
+    background-image: url("src/pics/background1.png");
 }
 .contenedor:hover {
     /* transform: translateY (10px); */
