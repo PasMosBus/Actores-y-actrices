@@ -14,10 +14,10 @@ body {
     border-radius: 15px;
     font-size: large;
     font-weight: bolder;
-    background-color: rgb(212, 123, 123);
+    background-color: rgb(181, 197, 218);
     box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.4);
 }
 .buttons:hover{
-    background-color: rgb(197, 64, 64);
+    background-color: rgb(122, 160, 209);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
