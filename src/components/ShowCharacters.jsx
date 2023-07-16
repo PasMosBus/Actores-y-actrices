@@ -1,13 +1,14 @@
 import axios from "axios"
 import { useEffect } from "react"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import './ShowCharacters.css'
 
 //const navigate = useNavigate()
 
 const url = "http://localhost:8080/characters"
 const ShowCharacters = () => {
-
+  const navigate = useNavigate();
   const [characters, setCharacters] = useState([])
   useEffect(() => {
     getAllCharacters()
@@ -19,7 +20,7 @@ const ShowCharacters = () => {
     setCharacters(data)
   }
   const handleEdit = (id) => {
-    //navigate(`/edit/${id}`); // redireccion a pagina edit
+    navigate(`/edit/${id}`); // redireccion a pagina edit
     alert(`Editing character with ID ${id}`);
   };
 
