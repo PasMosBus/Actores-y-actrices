@@ -37,7 +37,7 @@ const ShowCharacters = () => {
           <div className="all-container">
             <div className="contenedor" key={character.id}>
               <img className="pic" src={character.img} alt="" />
-              <h3 className="name"> {character.name} </h3>
+              <p className="name"> {character.name} </p>
               <p className="descript" > <span>{character.name} </span>{character.description}</p>
               <div className="container-buttones">
                 <button className="buttons" onClick={() => handleEdit(character.id)}>Edit</button>
