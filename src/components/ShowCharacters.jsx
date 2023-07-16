@@ -19,8 +19,7 @@ const ShowCharacters = () => {
     setCharacters(data)
   }
   const handleEdit = (id) => {
-    // Перенаправляємо на сторінку редагування (в реальному застосунку)
-    //navigate(`/edit/${id}`);
+    //navigate(`/edit/${id}`); // redireccion a pagina edit
     alert(`Editing character with ID ${id}`);
   };
 
