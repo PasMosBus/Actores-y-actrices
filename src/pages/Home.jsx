@@ -4,12 +4,14 @@ import '../pages/Home.css'
 const Home = () => {
     return (
         <>
-            
-            <div className="cont">
+            <div className="box">
                 <button className="buttons">Crear</button>
                 {/* <NavLink to="/create"> <button>Crear</button> </NavLink> */}
-                <ShowCharacters />
+                <div className="cont">
+                    <ShowCharacters />
+                </div>
             </div>
+
         </>
     )
 }
