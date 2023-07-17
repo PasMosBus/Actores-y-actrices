@@ -9,7 +9,7 @@ const EditCharacters = () => {
     const [name, setName] = useState("")
     const [picture, setPicture] = useState("")
     const [discribe, setDiscribe] = useState("")
-    const [character, setCharacter] = useState(null); // Додайте стан для збереження вибраного персонажа
+    const [character, setCharacter] = useState(null); // Add datos personage en linea 30
     const navigate = useNavigate()
 
     const { id } = useParams()  //choise persona
@@ -27,7 +27,7 @@ const EditCharacters = () => {
         const getCharactersById = async () => {
             const response = await axios.get(`${url}/${id}`);
             const data = response.data;
-            setCharacter(data); // Зберегти дані персонажа в стан
+            setCharacter(data); // Guardar datos personage
             setName(data.name);
             setPicture(data.img);
             setDiscribe(data.description);
@@ -41,10 +41,10 @@ const EditCharacters = () => {
             <div className="all-container">
                 <div className="container-create">
                     <h3>Edit data</h3>
-                    {character && <img className="pic-small" src={character.img} alt="" />} {/* Відображення зображення персонажа */}
+                    {character && <img className="pic-small" src={character.img} alt="" />} 
                     <form onSubmit={update}>
                         <div >
-                            <form>Name</form> {/* Використайте <form> замість <form> для текстових полів */}
+                            <form>Name</form> 
                             <input type="text" id="hover" value={name} onChange={(e) => setName(e.target.value)} />
                         </div>
                         <div>
