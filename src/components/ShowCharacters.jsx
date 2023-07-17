@@ -20,12 +20,17 @@ const ShowCharacters = () => {
     setCharacters(data)
   }
 
-
-  const handleDelete = (id) => {
-    // Deleting with API localhost8080
+  const handleDelete = async (id) => {
+      await axios.delete(`${url}/${id}`);
+      // Deleting with API localhost8080
+      setCharacters((prevCharacters) => prevCharacters.filter((character) => character.id !== id));
+      alert(`WARNING!!! DELETING ACTOR WITH ID ${id}`);
+  };
+/*   const handleDelete = (id) => {
+    // Deleting actor en page only (no en API localhost8080)
     setCharacters(characters.filter((character) => character.id !== id));
     alert(`WARNING!!! DELETING ACTOR WITH ID ${id}`);
-  };
+  }; */
 
   return (
     <>
@@ -39,6 +44,7 @@ const ShowCharacters = () => {
               <div className="container-buttones">
                 <NavLink to={`/edit/${character.id}`}> <button className="buttons">Edit</button> </NavLink>
                 <button className="buttons" onClick={() => handleDelete(character.id)}>Delete</button>
+                {/* <NavLink to={`/delite/${character.id}`}> <button className="buttons">Delite</button> </NavLink> */}
               </div>
             </div>
           </div>
