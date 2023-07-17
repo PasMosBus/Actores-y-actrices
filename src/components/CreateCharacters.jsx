@@ -23,26 +23,28 @@ const CreateCharacters = () => {
 
     return (
         <>
-            <div className="container-create">
-                <h3>Create an element</h3>
-                <form onSubmit={store}>
-                    <div >
-                        <form>Name</form>
-                        {/* nombre tiene que valer lo que ingresamos en el valué del input */}
-                        {/*  */}
-                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-                    </div>
-                    <div>
-                        <form>Picture</form>
-                        <input type="text" value={picture} onChange={(e) => setPicture(e.target.value)} />
-                    </div>
-                    <div>
-                        <form>Discribe</form>
-                        <textarea name="" id="" cols="22" rows="15" value={discribe} onChange={(e) => setDiscribe(e.target.value)}></textarea>
-                    </div>
-                    <button className="buttons">Add</button>
-                </form>
-                
+            <div className="all-container">
+                <div className="container-create">
+                    <h3>Create an element</h3>
+                    <form onSubmit={store}>
+                        <div >
+                            <form>Name</form>
+                            {/* nombre tiene que valer lo que ingresamos en el valué del input */}
+                            {/*  */}
+                            <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                        </div>
+                        <div>
+                            <form>Picture</form>
+                            <input type="text" value={picture} onChange={(e) => setPicture(e.target.value)} />
+                        </div>
+                        <div>
+                            <form>Discribe</form>
+                            <textarea name="" id="" cols="22" rows="15" value={discribe} onChange={(e) => setDiscribe(e.target.value)}></textarea>
+                        </div>
+                        <button className="buttons">Add</button>
+                    </form>
+
+                </div>
             </div>
         </>
     )

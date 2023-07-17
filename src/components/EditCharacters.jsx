@@ -12,7 +12,7 @@ const EditCharacters = () => {
     const [discribe, setDiscribe] = useState("")
     const navigate = useNavigate()
 
-    const {id} = useParams()  //choise persona
+    const { id } = useParams()  //choise persona
 
     const update = async (e) => {
         e.preventDefault();
@@ -23,38 +23,40 @@ const EditCharacters = () => {
         })
         navigate("/")
     }
-    useEffect( () => {
-       const getCharactersById = async () => {
+    useEffect(() => {
+        const getCharactersById = async () => {
 
-        const response = await axios.get(`${url}/${id}`)
-        setName(response.data.name)
-        setPicture(response.data.img)
-        setDiscribe(response.data.description)
-       }
+            const response = await axios.get(`${url}/${id}`)
+            setName(response.data.name)
+            setPicture(response.data.img)
+            setDiscribe(response.data.description)
+        }
 
-       getCharactersById()
+        getCharactersById()
     }, [id])
 
     return (
         <>
-            <div className="container-create">
-                <h3>Edit data</h3>
-                <form onSubmit={update}>
-                    <div >
-                        <form>Name</form>
-                        <input type="text" id="hover" value={name} onChange={(e) => setName(e.target.value)} />
-                    </div>
-                    <div>
-                        <form>Picture</form>
-                        <input type="text" id="hover" value={picture} onChange={(e) => setPicture(e.target.value)} />
-                    </div>
-                    <div>
-                        <form>Discribe</form>
-                        <textarea name="" id="hover" cols="22" rows="15" value={discribe} onChange={(e) => setDiscribe(e.target.value)}></textarea>
-                    </div>
-                    <button className="buttons">Change</button>
-                </form>
-                
+            <div className="all-container">
+                <div className="container-create">
+                    <h3>Edit data</h3>
+                    <form onSubmit={update}>
+                        <div >
+                            <form>Name</form>
+                            <input type="text" id="hover" value={name} onChange={(e) => setName(e.target.value)} />
+                        </div>
+                        <div>
+                            <form>Picture</form>
+                            <input type="text" id="hover" value={picture} onChange={(e) => setPicture(e.target.value)} />
+                        </div>
+                        <div>
+                            <form>Discribe</form>
+                            <textarea name="" id="hover" cols="22" rows="15" value={discribe} onChange={(e) => setDiscribe(e.target.value)}></textarea>
+                        </div>
+                        <button className="buttons">Change</button>
+                    </form>
+
+                </div>
             </div>
         </>
     )
