@@ -38,7 +38,7 @@ const ShowCharacters = () => {
               <p className="name"> {character.name} </p>
               <p className="descript" > <span>{character.name} </span>{character.description}</p>
               <div className="container-buttones">
-                <NavLink to="/edit/:id"> <button className="buttons">Edit</button> </NavLink>
+                <NavLink to={`/edit/${character.id}`}> <button className="buttons">Edit</button> </NavLink>
                 <button className="buttons" onClick={() => handleDelete(character.id)}>Delete</button>
               </div>
             </div>
