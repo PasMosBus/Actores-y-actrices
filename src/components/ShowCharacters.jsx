@@ -9,7 +9,6 @@ import './ShowCharacters.css'
 
 const url = "http://localhost:8080/characters"
 const ShowCharacters = () => {
-  const navigate = useNavigate();
   const [characters, setCharacters] = useState([])
   useEffect(() => {
     getAllCharacters()
