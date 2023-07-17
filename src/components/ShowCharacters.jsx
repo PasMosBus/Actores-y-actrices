@@ -24,7 +24,7 @@ const ShowCharacters = () => {
       await axios.delete(`${url}/${id}`);
       // Deleting with API localhost8080
       setCharacters((prevCharacters) => prevCharacters.filter((character) => character.id !== id));
-      alert(`WARNING!!! DELETING ACTOR WITH ID ${id}`);
+      alert(`WARNING!!! DELETING CARD WITH ID ${id}`);
   };
 /*   const handleDelete = (id) => {
     // Deleting actor en page only (no en API localhost8080)
