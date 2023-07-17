@@ -42,7 +42,7 @@ const ShowCharacters = () => {
               <p className="name"> {character.name} </p>
               <p className="descript" ><span>{character.name} </span>{character.description} <span> 
                 <br />
-               Find {character.name} en <NavLink to="https://en.wikipedia.org/w/index.php?search=&title=Special%3ASearch"><span>Wikipedia</span></NavLink> </span></p>
+               Find {character.name} en <NavLink to={`https://en.wikipedia.org/w/index.php?search=${character.name}&title=Special%3ASearch`} target="_blank"><span>Wikipedia</span></NavLink> </span></p>
               <div className="container-buttones">
                 <NavLink to={`/edit/${character.id}`}> <button className="buttons">Edit</button> </NavLink>
                 <button className="buttons" onClick={() => handleDelete(character.id)}>Delete</button>
