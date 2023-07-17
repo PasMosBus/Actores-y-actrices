@@ -40,7 +40,9 @@ const ShowCharacters = () => {
             <div className="contenedor" key={character.id}>
               <img className="pic" src={character.img} alt="" />
               <p className="name"> {character.name} </p>
-              <p className="descript" > <span>{character.name} </span>{character.description}</p>
+              <p className="descript" ><span>{character.name} </span>{character.description} <span> 
+                <br />
+               Find {character.name} en <NavLink to="https://en.wikipedia.org/w/index.php?search=&title=Special%3ASearch"><span>Wikipedia</span></NavLink> </span></p>
               <div className="container-buttones">
                 <NavLink to={`/edit/${character.id}`}> <button className="buttons">Edit</button> </NavLink>
                 <button className="buttons" onClick={() => handleDelete(character.id)}>Delete</button>
