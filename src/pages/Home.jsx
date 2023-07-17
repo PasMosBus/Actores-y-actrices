@@ -1,12 +1,13 @@
 import ShowCharacters from "../components/ShowCharacters";
 import '../pages/Home.css'
+import { NavLink } from "react-router-dom"
 
 const Home = () => {
     return (
         <>
             <div className="box">
-                <button className="buttons">Create</button>
-                {/* <NavLink to="/create"> <button>Create</button> </NavLink> */}
+                
+                <NavLink to="/create"> <button className="buttons">Create</button> </NavLink>
                 <div className="cont">
                     <ShowCharacters />
                 </div>

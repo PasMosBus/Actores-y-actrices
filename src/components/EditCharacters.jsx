@@ -66,7 +66,7 @@ const EditCharacters = () => {
                 </div>
                 <div>
                     <form>Discribe</form>
-                    <textarea name="" id="" cols="22" rows="15" value={discribe} onChange={(e) => setDiscribe(e.target.value)}></textarea>
+                    <textarea name="" id="" cols="22" rows="15" value={discribe} onChange={(e) => setDescription(e.target.value)}></textarea>
                 </div>
                 <button className="buttons" type="submit">Update</button>
             </form>

@@ -47,5 +47,4 @@ const CreateCharacters = () => {
         </>
     )
 }
-
 export default CreateCharacters
