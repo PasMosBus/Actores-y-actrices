@@ -17,9 +17,10 @@ body {
     margin-bottom: 12px;
     width: 100px;
     height: 33px;
+    border: solid 1px;
     border-radius: 15px;
     font-size: large;
-    font-weight: bolder;
+    
     background-color: rgb(181, 197, 218);
     box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.4);
 }
