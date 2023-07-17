@@ -38,19 +38,19 @@ const EditCharacters = () => {
     return (
         <>
             <div className="container-create">
-                <h3>Edit an persona</h3>
+                <h3>Edit data</h3>
                 <form onSubmit={update}>
                     <div >
                         <form>Name</form>
-                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                        <input type="text" id="hover" value={name} onChange={(e) => setName(e.target.value)} />
                     </div>
                     <div>
                         <form>Picture</form>
-                        <input type="text" value={picture} onChange={(e) => setPicture(e.target.value)} />
+                        <input type="text" id="hover" value={picture} onChange={(e) => setPicture(e.target.value)} />
                     </div>
                     <div>
                         <form>Discribe</form>
-                        <textarea name="" id="" cols="22" rows="15" value={discribe} onChange={(e) => setDiscribe(e.target.value)}></textarea>
+                        <textarea name="" id="hover" cols="22" rows="15" value={discribe} onChange={(e) => setDiscribe(e.target.value)}></textarea>
                     </div>
                     <button className="buttons">Change</button>
                 </form>

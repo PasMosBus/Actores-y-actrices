@@ -15,6 +15,7 @@ body {
 
 }
 .buttons{
+    margin-top: 8px;
     width: 100px;
     height: 33px;
     border-radius: 15px;
@@ -26,4 +27,5 @@ body {
 .buttons:hover{
     background-color: rgb(122, 160, 209);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    color: rgb(52, 52, 53);
 }
