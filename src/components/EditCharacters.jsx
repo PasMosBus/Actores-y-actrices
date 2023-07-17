@@ -6,10 +6,10 @@ import './EditCharacters.css'
 const url = 'http://localhost:8080/characters'
 
 const EditCharacters = () => {
-
     const [name, setName] = useState("")
     const [picture, setPicture] = useState("")
     const [discribe, setDiscribe] = useState("")
+    const [character, setCharacter] = useState(null); // Додайте стан для збереження вибраного персонажа
     const navigate = useNavigate()
 
     const { id } = useParams()  //choise persona
@@ -25,11 +25,12 @@ const EditCharacters = () => {
     }
     useEffect(() => {
         const getCharactersById = async () => {
-
-            const response = await axios.get(`${url}/${id}`)
-            setName(response.data.name)
-            setPicture(response.data.img)
-            setDiscribe(response.data.description)
+            const response = await axios.get(`${url}/${id}`);
+            const data = response.data;
+            setCharacter(data); // Зберегти дані персонажа в стан
+            setName(data.name);
+            setPicture(data.img);
+            setDiscribe(data.description);
         }
 
         getCharactersById()
@@ -40,9 +41,10 @@ const EditCharacters = () => {
             <div className="all-container">
                 <div className="container-create">
                     <h3>Edit data</h3>
+                    {character && <img className="pic-small" src={character.img} alt="" />} {/* Відображення зображення персонажа */}
                     <form onSubmit={update}>
                         <div >
-                            <form>Name</form>
+                            <form>Name</form> {/* Використайте <form> замість <form> для текстових полів */}
                             <input type="text" id="hover" value={name} onChange={(e) => setName(e.target.value)} />
                         </div>
                         <div>
@@ -51,16 +53,14 @@ const EditCharacters = () => {
                         </div>
                         <div>
                             <form>Discribe</form>
-                            <textarea name="" id="hover" cols="22" rows="15" value={discribe} onChange={(e) => setDiscribe(e.target.value)}></textarea>
+                            <textarea name="" id="hover" cols="22" rows="10" value={discribe} onChange={(e) => setDiscribe(e.target.value)}></textarea>
                         </div>
                         <button className="buttons">Change</button>
                     </form>
-
                 </div>
             </div>
         </>
     )
 }
-
 
 export default EditCharacters;
