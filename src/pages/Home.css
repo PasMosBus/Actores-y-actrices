@@ -18,9 +18,8 @@ body {
     width: 100px;
     height: 33px;
     border: solid 1px;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: large;
-    
     background-color: rgb(181, 197, 218);
     box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.4);
 }
