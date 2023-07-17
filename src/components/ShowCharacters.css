@@ -3,7 +3,7 @@
     justify-content: center;
 }
 .contenedor {
-    margin-top: 30px;
+    margin-top: 10px;
     width: 40%;
     
     display: flex;
@@ -21,7 +21,7 @@
     box-shadow: 25px 25px 10px rgba(0, 0, 0, 0.4);
 }
 .pic{
-    margin-top: 20px;
+    margin-top: 40px;
     width: 200px;
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.4);
 }
@@ -40,6 +40,7 @@ span {
     
 }
 .descript{
+    margin-top: -10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: larger;
     margin-left: 10px;
