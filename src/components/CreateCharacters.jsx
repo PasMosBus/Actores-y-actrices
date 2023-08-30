@@ -39,7 +39,8 @@ const CreateCharacters = () => {
                         </div>
                         <div>
                             <form>Discribe</form>
-                            <textarea name="" id="" cols="22" rows="15" value={discribe} onChange={(e) => setDiscribe(e.target.value)}></textarea>
+                            <textarea name="" id="" cols="22" rows="15" 
+                            value={discribe} onChange={(e) => setDiscribe(e.target.value)}></textarea>
                         </div>
                         <button className="buttons">Add</button>
                     </form>

@@ -45,15 +45,18 @@ const EditCharacters = () => {
                     <form onSubmit={update}>
                         <div >
                             <form>Name</form> 
-                            <input type="text" id="hover" value={name} onChange={(e) => setName(e.target.value)} />
+                            <input type="text" id="hover" 
+                            value={name} onChange={(e) => setName(e.target.value)} />
                         </div>
                         <div>
                             <form>Picture</form>
-                            <input type="text" id="hover" value={picture} onChange={(e) => setPicture(e.target.value)} />
+                            <input type="text" id="hover" 
+                            value={picture} onChange={(e) => setPicture(e.target.value)} />
                         </div>
                         <div>
                             <form>Discribe</form>
-                            <textarea name="" id="hover" cols="22" rows="10" value={discribe} onChange={(e) => setDiscribe(e.target.value)}></textarea>
+                            <textarea name="" id="hover" cols="22" rows="10" 
+                            value={discribe} onChange={(e) => setDiscribe(e.target.value)}></textarea>
                         </div>
                         <button className="buttons">Change</button>
                     </form>
